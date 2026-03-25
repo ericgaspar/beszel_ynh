@@ -1,5 +1,19 @@
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+WorkingDirectory={/path/to/working/directory}
+ExecStart={/path/to/working/directory}/beszel serve --http "0.0.0.0:8090"
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
 [Unit]
-Description=Small description of the service
+Description=Beszel Hub
 After=network.target
 
 [Service]
@@ -7,12 +21,10 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+ExecStart=__INSTALL_DIR__/beszel serve --http "127.0.0.1:__PORT__"
+Restart=always
+RestartSec=3
 
-### Depending on specificities of your service/app, you may need to tweak these
-### .. but this should be a good baseline
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes

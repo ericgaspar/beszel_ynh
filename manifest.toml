@@ -4,12 +4,12 @@ packaging_format = 2
 
 id = "beszel"
 name = "Beszel"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
+description.en = "Simple, lightweight server monitoring"
 description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
 
-version = "1.0~ynh1"
+version = "0.18.4~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"
@@ -71,8 +71,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/henrygd/beszel/releases/download/v0.18.4/beszel-agent_linux_amd64.tar.gz"
-    sha256 = "b298edb5ac8f465374691b54af6c2399d580d8ebcb501fee511370fa7bf910f9"
+    url = "github.com/henrygd/beszel/releases/download/v0.18.4/beszel_linux_amd64.tar.gz"
+    sha256 = "94420342b6e1e9b7a5fd0457388573148c9de39763c04cfea715865c914cf470"
 
     autoupdate.strategy = "latest_github_release"
 
