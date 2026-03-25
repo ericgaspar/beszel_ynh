@@ -43,7 +43,7 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    in_subdir = false
+    in_subdir = true
     extract = true
     url = "github.com/henrygd/beszel/releases/download/v0.18.4/beszel_linux_amd64.tar.gz"
     sha256 = "94420342b6e1e9b7a5fd0457388573148c9de39763c04cfea715865c914cf470"
