@@ -4,7 +4,7 @@ packaging_format = 2
 
 id = "beszel"
 name = "Beszel"
-description.en = "Simple, lightweight server monitoring"
+description.en = "Lightweight server monitoring"
 description.fr = "Monitoring de serveurs"
 
 version = "0.18.4~ynh1"
